@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbSinavOgrenciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DERSLER">
+    <Key>
+      <PropertyRef Name="DERSID" />
+    </Key>
+    <Property Name="DERSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DERSAD" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TBLNOTLAR">
+    <Key>
+      <PropertyRef Name="NOTID" />
+    </Key>
+    <Property Name="NOTID" Type="int" Nullable="false" />
+    <Property Name="OGR" Type="int" />
+    <Property Name="DERS" Type="int" />
+    <Property Name="SINAV1" Type="int" />
+    <Property Name="SINAV2" Type="int" />
+    <Property Name="SINAV3" Type="int" />
+    <Property Name="ORTALAMA" Type="int" />
+    <Property Name="DURUM" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBLOGRENCI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD" Type="varchar" MaxLength="20" />
+    <Property Name="SOYAD" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <Association Name="FK_TBLNOTLAR_DERSLER">
+    <End Role="DERSLER" Type="Self.DERSLER" Multiplicity="0..1" />
+    <End Role="TBLNOTLAR" Type="Self.TBLNOTLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DERSLER">
+        <PropertyRef Name="DERSID" />
+      </Principal>
+      <Dependent Role="TBLNOTLAR">
+        <PropertyRef Name="DERS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLNOTLAR_TBLOGRENCI">
+    <End Role="TBLOGRENCI" Type="Self.TBLOGRENCI" Multiplicity="0..1" />
+    <End Role="TBLNOTLAR" Type="Self.TBLNOTLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLOGRENCI">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBLNOTLAR">
+        <PropertyRef Name="OGR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="NOTLARIM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="NOTLISTESI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="DbSinavOgrenciModelStoreContainer">
+    <EntitySet Name="DERSLER" EntityType="Self.DERSLER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLNOTLAR" EntityType="Self.TBLNOTLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLOGRENCI" EntityType="Self.TBLOGRENCI" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBLNOTLAR_DERSLER" Association="Self.FK_TBLNOTLAR_DERSLER">
+      <End Role="DERSLER" EntitySet="DERSLER" />
+      <End Role="TBLNOTLAR" EntitySet="TBLNOTLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLNOTLAR_TBLOGRENCI" Association="Self.FK_TBLNOTLAR_TBLOGRENCI">
+      <End Role="TBLOGRENCI" EntitySet="TBLOGRENCI" />
+      <End Role="TBLNOTLAR" EntitySet="TBLNOTLAR" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

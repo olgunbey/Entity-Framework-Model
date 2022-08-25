@@ -1,0 +1,15 @@
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\bin\Debug\Entity Framework Model.exe.config
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\bin\Debug\Entity Framework Model.exe
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\bin\Debug\Entity Framework Model.pdb
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\bin\Debug\EntityFramework.dll
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\bin\Debug\EntityFramework.xml
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\obj\Debug\Entity Framework Model.csproj.AssemblyReference.cache
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\obj\Debug\Entity_Framework_Model.Properties.Resources.resources
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\obj\Debug\Entity Framework Model.csproj.GenerateResource.cache
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\obj\Debug\Entity Framework Model.csproj.CoreCompileInputs.cache
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\obj\Debug\Entity Framework Model.csproj.CopyComplete
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\obj\Debug\Entity Framework Model.exe
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\obj\Debug\Entity Framework Model.pdb
+C:\Users\olgun\OneDrive\Masaüstü\c#\Entity Framework\Entity Framework Model\Entity Framework Model\obj\Debug\Entity_Framework_Model.Form1.resources
